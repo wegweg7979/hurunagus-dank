@@ -20,11 +20,10 @@ modules:
   - type: dnf
     repos:
       copr:
-        - atim/starship
+        - avengemedia/dms
     install:
       packages:
-        - micro
-        - starship
+        - dms
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
