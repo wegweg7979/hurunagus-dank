@@ -1,7 +1,7 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/<user>/<name>
-name: hurunagus-dank
+name: hurunagus-silverblue-dank
 # description will be included in the image's metadata
 description: This is my personal OS image.
 
@@ -33,14 +33,14 @@ modules:
     install:
       packages:
         - dms
-        - btop
-        - fastfetch
+        #- btop
+        #- fastfetch
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
         # "firefox" is the main package, "firefox-langpacks" is a dependency
-        - firefox
-        - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+       # - firefox
+       # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
 
   - type: default-flatpaks
     configurations:
