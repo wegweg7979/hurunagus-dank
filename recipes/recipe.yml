@@ -17,6 +17,15 @@ modules:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
+  - type: os-release
+    properties:
+      ID: hurunagus-silverblue-dank
+      ID_LIKE: fedora
+      NAME: hurunagus-silverblue-dank
+      PRETTY_NAME: hurunagus-silverblue-dank
+      VERSION_CODENAME: hurunagus-silverblue-dank
+      DEFAULT_HOSTNAME: hurunagas33
+
   - type: dnf
     repos:
       copr:
@@ -24,6 +33,8 @@ modules:
     install:
       packages:
         - dms
+        - btop
+        - fastfetch
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
