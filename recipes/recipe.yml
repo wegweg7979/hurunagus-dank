@@ -12,17 +12,8 @@ image-version: 44 # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - type: os-release
-    properties:
-      ID: hurunagus-dank
-      ID_LIKE: fedora
-      NAME: hurunagus-dank
-      PRETTY_NAME: hurunagus-dank
-      VERSION_CODENAME: fedora-44-x86_64
-      DEFAULT_HOSTNAME: hurunagas33
+
       
-
-
   - type: files
     files:
       - source: system
@@ -51,5 +42,14 @@ modules:
           - org.mozilla.firefox
           - org.gnome.Loupe
       - scope: user # Also add Flathub user repo, but no user packages
+
+  - type: os-release
+    properties:
+      ID: hurunagus-dank
+      ID_LIKE: fedora
+      NAME: hurunagus-dank
+      PRETTY_NAME: hurunagus-dank
+      VERSION_CODENAME: fedora-44-x86_64
+      DEFAULT_HOSTNAME: hurunagas33
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
