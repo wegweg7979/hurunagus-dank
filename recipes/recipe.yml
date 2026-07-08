@@ -18,7 +18,7 @@ modules:
       ID_LIKE: fedora
       NAME: hurunagus-silverblue-dank
       PRETTY_NAME: hurunagus-silverblue-dank
-      VERSION_CODENAME: hurunagus-silverblue-dank
+      VERSION_CODENAME: fedora-44-x86_64
       DEFAULT_HOSTNAME: hurunagas33
       
   
