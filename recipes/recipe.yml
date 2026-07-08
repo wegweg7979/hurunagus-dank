@@ -138,9 +138,6 @@ modules:
          
       # - scope: user # Also add Flathub user repo, but no user packages
 
-  - type: script
-    scripts:
-         - bpfland.sh
 
   - type: os-release
     properties:
