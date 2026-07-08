@@ -81,12 +81,7 @@ modules:
 
   #- type: gschema-overrides
   
-  # Cachyos kernel
-  - type: custom-kernel
-    source: local
-    kernel: cachyos
-    initramfs: true
-    nvidia: false
+
     
   - type: default-flatpaks
     configurations:
