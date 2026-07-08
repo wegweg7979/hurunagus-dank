@@ -79,7 +79,7 @@ modules:
         - dms
 
 
-  - type: gschema-overrides
+  #- type: gschema-overrides
   
   # Cachyos kernel
   - type: custom-kernel
