@@ -1,13 +1,8 @@
 # BlueBuild Template &nbsp; [![bluebuild build badge](https://github.com/blue-build/template/actions/workflows/build.yml/badge.svg)](https://github.com/blue-build/template/actions/workflows/build.yml)
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
+Declarative, Atomic, immutable linux system. Built from atomic fedora, specifically Fedora silverblue, with customisations including the cachyOS kernel (v3 compatible cpus only) pre-installed. SCX schedular BPFland enabled by default. WM Niri, with Dank Material Shell, also Gnome 50 set up how i like it. (Dash to panel, Tiling Shell) Contains MY software choices for all types of computing. (These cannot be uninstalled by the user). Dont use this- make your own with bluebuild, it is not too difficult.
 
-After setup, it is recommended you update this README to describe your custom image.
-
-## Installation
-
-> [!WARNING]  
-> [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
+To rebase an existing atomic Fedora installation to the latest build:
 
 To rebase an existing atomic Fedora installation to the latest build:
 
