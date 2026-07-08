@@ -1,0 +1,8 @@
+// DMS Window Rules - Managed by DankMaterialShell
+// Do not edit manually - changes may be overwritten
+
+// @id=wr_1783440162712051594 @name=re.sonny.Retro
+window-rule {
+    match app-id="^re.sonny.Retro$"
+    open-floating true
+}
