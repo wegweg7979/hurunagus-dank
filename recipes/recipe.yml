@@ -32,13 +32,6 @@ modules:
       - Google Sans
       - Ubuntu
 
-  - type: gnome-extensions
-    install:
-      - Blur my Shell
-      - Dash to Panel
-      #- GSConnect
-      - Logo Menu
-      - Tiling Shell
       
   - type: files
     files:
@@ -53,17 +46,17 @@ modules:
       packages:
         - btop
         - fastfetch
-        - gnome-tweaks
-        - gnome-backgrounds-extras
+        #- gnome-tweaks
+        #- gnome-backgrounds-extras
         - scx-scheds
         - scx-tools
         - scx-manager
-        - niri
+        #- niri
         #- usbmuxd
         - adwaita-fonts-all
         - igt-gpu-tools
-        - rclone
-        - rclone-browser
+        #- rclone
+        #- rclone-browser
         #- mesa-libGLU
         #- starship
     remove:
