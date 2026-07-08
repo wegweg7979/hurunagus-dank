@@ -3,7 +3,7 @@
 # image will be published to ghcr.io/<user>/<name>
 name: hurunagus-silverblue-dank
 # description will be included in the image's metadata
-description: This is my personal OS image.
+description: Custom Silverblue with CachyOS kernel.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/wayblueorg/niri
@@ -12,11 +12,6 @@ image-version: 44 # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - type: files
-    files:
-      - source: system
-        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
-
   - type: os-release
     properties:
       ID: hurunagus-silverblue-dank
@@ -25,6 +20,70 @@ modules:
       PRETTY_NAME: hurunagus-silverblue-dank
       VERSION_CODENAME: hurunagus-silverblue-dank
       DEFAULT_HOSTNAME: hurunagas33
+      
+  
+  - type: fonts
+    fonts:
+      google-fonts:
+      - Roboto
+      - Open Sans
+      - Inter
+      - Roboto Mono
+      - Google Sans
+      - Ubuntu
+
+  - type: gnome-extensions
+    install:
+      - Blur my Shell
+      - Dash to Panel
+      #- GSConnect
+      - Logo Menu
+      - Tiling Shell
+      
+  - type: files
+    files:
+      - source: system
+        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+
+  - type: dnf
+    repos:
+      copr:
+        - bieszczaders/kernel-cachyos-addons
+    install:
+      packages:
+        - btop
+        - fastfetch
+        - gnome-tweaks
+        - gnome-backgrounds-extras
+        - scx-scheds
+        - scx-tools
+        - scx-manager
+        - niri
+        #- usbmuxd
+        - adwaita-fonts-all
+        - igt-gpu-tools
+        - rclone
+        - rclone-browser
+        #- mesa-libGLU
+        #- starship
+    remove:
+      packages:
+        - firefox
+        - firefox-langpacks
+        - gnome-software
+        - gnome-system-monitor
+        - gnome-tour
+        #- thunderbird
+      
+
+
+  - type: dnf
+    repos:
+      files:
+        - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+    install:
+      packages:
+        - brave-origin
 
   - type: dnf
     repos:
@@ -33,23 +92,74 @@ modules:
     install:
       packages:
         - dms
-        #- btop
-        #- fastfetch
-    remove:
-      packages:
-        # example: removing firefox (in favor of the flatpak)
-        # "firefox" is the main package, "firefox-langpacks" is a dependency
-        - firefox
-        - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
 
+
+  - type: gschema-overrides
+  
+  # Cachyos kernel
+  - type: custom-kernel
+    source: local
+    kernel: cachyos
+    initramfs: true
+    nvidia: false
+    
   - type: default-flatpaks
     configurations:
-      - notify: true # Send notification after install/uninstall is finished (true/false)
+      - notify: false # Send notification after install/uninstall is finished (true/false)
         scope: system
         # If no repo information is specified, Flathub will be used by default
         install: # system flatpaks we want all users to have and not remove
-          - org.mozilla.firefox
-          - org.gnome.Loupe
-      - scope: user # Also add Flathub user repo, but no user packages
+        # - org.mozilla.firefox
+         - org.audacityteam.Audacity
+         - com.bitwig.BitwigStudio
+         - org.blender.Blender
+         - com.brave.Browser
+         - org.chromium.Chromium
+         - de.leopoldluley.Clapgrep
+         - org.fedoraproject.MediaWriter
+         - org.gimp.GIMP
+         - org.kde.kdenlive
+         - com.obsproject.Studio
+         - re.sonny.Retro
+         - org.videolan.VLC
+         - org.libreoffice.LibreOffice
+         - org.pitivi.Pitivi
+         - fr.handbrake.ghb
+         - io.gitlab.theevilskeleton.Upscaler
+         - com.github.wwmm.easyeffects
+         - org.thentrythis.Samplebrain
+         - net.biniou.LeBiniou
+         - com.github.zocker_160.SyncThingy
+         - org.kde.kate
+         - org.kde.okular
+         - org.mixxx.Mixxx
+         #- org._3fz.mtoc
+         - org.luanti.luanti
+         - org.vinegarhq.Sober
+         - net.supertuxkart.SuperTuxKart
+         - org.kde.kpat
+         - org.gnome.Chess
+         - org.gnome.Maps
+         - org.nongnu.lingot
+         - com.dec05eba.gpu_screen_recorder
+         - com.github.polymeilex.neothesia
+         - com.rafaelmardojai.Blanket
+         - me.timschneeberger.jdsp4linux
+         - org.inkscape.Inkscape
+         - org.virt_manager.virt-manager
+         - org.virt_manager.virt_manager.Extension.Qemu
+         - io.missioncenter.MissionCenter
+         - io.github.kolunmi.Bazaar
+         - com.mattjakeman.ExtensionManager
+         - com.github.tchx84.Flatseal
+         - org.altlinux.Tuner
+         - io.github.shiftey.Desktop
+         - be.alexandervanhee.gradia
+         
+      # - scope: user # Also add Flathub user repo, but no user packages
+
+  - type: script
+    scripts:
+         - bpfland.sh
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
