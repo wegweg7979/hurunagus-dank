@@ -41,16 +41,16 @@ modules:
   - type: dnf
     repos:
       copr:
-        - bieszczaders/kernel-cachyos-addons
+        #- bieszczaders/kernel-cachyos-addons
     install:
       packages:
         - btop
         - fastfetch
         #- gnome-tweaks
         #- gnome-backgrounds-extras
-        - scx-scheds
-        - scx-tools
-        - scx-manager
+        #- scx-scheds
+        #- scx-tools
+        #- scx-manager
         #- niri
         #- usbmuxd
         - adwaita-fonts-all
@@ -61,11 +61,11 @@ modules:
         #- starship
     remove:
       packages:
-        - firefox
-        - firefox-langpacks
-        - gnome-software
-        - gnome-system-monitor
-        - gnome-tour
+        #- firefox
+        #- firefox-langpacks
+        #- gnome-software
+        #- gnome-system-monitor
+        #- gnome-tour
         #- thunderbird
       
 
