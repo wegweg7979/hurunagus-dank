@@ -18,12 +18,12 @@ modules:
   - type: fonts
     fonts:
       google-fonts:
-      - Roboto
+      #- Roboto
       - Open Sans
       - Inter
-      - Roboto Mono
-      - Google Sans
-      - Ubuntu
+      #- Roboto Mono
+      #- Google Sans
+      #- Ubuntu
 
       
   - type: files
@@ -53,6 +53,8 @@ modules:
         - mesa-libGLU
         - greetd
         - xdg-desktop-portal-gnome
+        - cups-pk-helper
+
 
 
         #- starship
@@ -82,6 +84,8 @@ modules:
     install:
       packages:
         - dms
+        - dsearch
+        - dms-greeter
 
 
   #- type: gschema-overrides
