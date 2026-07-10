@@ -56,10 +56,12 @@ modules:
         - cups-pk-helper
         - khal
         - nautilus
+        - foot
         #- intel-media-driver
         #- libva-intel-driver
         - libva-utils
         - gstreamer1-vaapi
+        - pipewire
 
 
 
