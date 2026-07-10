@@ -56,8 +56,8 @@ modules:
         - cups-pk-helper
         - khal
         - nautilus
-        - intel-media-driver
-        - libva-intel-driver
+        #- intel-media-driver
+        #- libva-intel-driver
         - libva-utils
         - gstreamer1-vaapi
 
@@ -107,8 +107,8 @@ modules:
         - lame
         - libde265
         - x265-libs
-        #- intel-media-driver
-        #- libva-intel-driver
+        - intel-media-driver
+        - libva-intel-driver
         - libva-utils
         - gstreamer1-vaapi
 
