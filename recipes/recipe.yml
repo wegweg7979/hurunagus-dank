@@ -53,7 +53,6 @@ modules:
         - mesa-libGLU
         - greetd
         - xdg-desktop-portal-gnome
-        - polkit-gnome
 
 
         #- starship
