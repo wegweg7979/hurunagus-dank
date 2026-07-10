@@ -54,6 +54,12 @@ modules:
         - greetd
         - xdg-desktop-portal-gnome
         - cups-pk-helper
+        - khal
+        - nautilus
+        - intel-media-driver
+        - libva-intel-driver
+        - libva-utils
+        - gstreamer1-vaapi
 
 
 
@@ -87,6 +93,20 @@ modules:
         - dsearch
         - dms-greeter
 
+
+  - type: dnf
+    repos:
+      nonfree: rpmfusion
+    install:
+      packages:
+        - gstreamer1-plugins-bad-free
+        - gstreamer1-plugins-bad-freeworld
+        - gstreamer1-plugins-good-extras
+        - gstreamer1-plugins-ugly
+        - gstreamer1-libav
+        - lame
+        - libde265
+        - x265-libs
 
   #- type: gschema-overrides
   
