@@ -107,6 +107,10 @@ modules:
         - lame
         - libde265
         - x265-libs
+        - intel-media-driver
+        - libva-intel-driver
+        - libva-utils
+        - gstreamer1-vaapi
 
   #- type: gschema-overrides
   
