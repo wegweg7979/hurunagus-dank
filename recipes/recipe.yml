@@ -18,12 +18,12 @@ modules:
   - type: fonts
     fonts:
       google-fonts:
-      #- Roboto
+      - Roboto
       - Open Sans
       - Inter
-      #- Roboto Mono
-      #- Google Sans
-      #- Ubuntu
+      - Roboto Mono
+      - Google Sans
+      - Ubuntu
 
       
   - type: files
@@ -48,8 +48,8 @@ modules:
         - usbmuxd
         - adwaita-fonts-all
         - igt-gpu-tools
-        - rclone
-        - rclone-browser
+        #- rclone
+        #- rclone-browser
         - mesa-libGLU
         - greetd
         - xdg-desktop-portal-gnome
@@ -57,11 +57,12 @@ modules:
         - khal
         - nautilus
         - foot
-        #- intel-media-driver
-        #- libva-intel-driver
         - libva-utils
         - gstreamer1-vaapi
         - pipewire
+        - tuned
+        - NetworkManager
+        - qt6ct-kde
 
 
 
@@ -114,7 +115,14 @@ modules:
         - libva-utils
         - gstreamer1-vaapi
 
-  #- type: gschema-overrides
+  - type: gschema-overrides
+
+  # Cachyos kernel
+  - type: custom-kernel
+    source: local
+    kernel: cachyos
+    initramfs: true
+    nvidia: false
   
 
     
@@ -173,6 +181,10 @@ modules:
          
       # - scope: user # Also add Flathub user repo, but no user packages
 
+
+  - type: script
+    scripts:
+         - bpfland.sh
 
   - type: os-release
     properties:
