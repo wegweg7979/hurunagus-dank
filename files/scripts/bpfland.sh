@@ -6,4 +6,4 @@
 set -oue pipefail
 
 # Your code goes here.
-systemctl enable --now scx_loader.service
+systemctl enable --now scx_loader.service && systemctl enable --now greetd
