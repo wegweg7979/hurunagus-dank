@@ -62,7 +62,7 @@ modules:
         - pipewire
         - tuned
         - NetworkManager
-        - qt6ct-kde
+        #- qt6ct-kde
 
 
 
