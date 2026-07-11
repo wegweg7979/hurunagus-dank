@@ -61,8 +61,11 @@ modules:
         - gstreamer1-vaapi
         - pipewire
         - tuned
+        - tuned-utils
         - NetworkManager
-        - google-noto-fonts-all
+        - google-noto-sans-fonts
+        - google-noto-serif-fonts
+        - google-noto-sans-mono-fonts
         #- qt6ct-kde
 
 
@@ -103,14 +106,14 @@ modules:
       nonfree: rpmfusion
     install:
       packages:
-        - gstreamer1-plugins-bad-free
+        #- gstreamer1-plugins-bad-free
         - gstreamer1-plugins-bad-freeworld
         - gstreamer1-plugins-good-extras
         - gstreamer1-plugins-ugly
-        - gstreamer1-libav
+        #- gstreamer1-libav
         - lame
-        - libde265
-        - x265-libs
+        #- libde265
+        #- x265-libs
         - intel-media-driver
         - libva-intel-driver
         - libva-utils
