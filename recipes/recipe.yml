@@ -62,6 +62,7 @@ modules:
         - pipewire
         - tuned
         - tuned-utils
+        - tuned-ppd
         - NetworkManager
         - google-noto-sans-fonts
         - google-noto-serif-fonts
@@ -115,7 +116,7 @@ modules:
         - lame
         #- libde265
         #- x265-libs
-        - intel-media-driver
+        #- intel-media-driver
         - libva-intel-driver
         - libva-utils
         - gstreamer1-vaapi
