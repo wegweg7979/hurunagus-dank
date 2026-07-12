@@ -18,12 +18,12 @@ modules:
   - type: fonts
     fonts:
       google-fonts:
-      - Roboto
-      - Open Sans
+      #- Roboto
+      #- Open Sans
       - Inter
-      - Roboto Mono
-      - Google Sans
-      - Ubuntu
+      #- Roboto Mono
+      #- Google Sans
+      #- Ubuntu
 
       
   - type: files
@@ -66,7 +66,7 @@ modules:
         - google-noto-sans-fonts
         - google-noto-serif-fonts
         - google-noto-sans-mono-fonts
-        #- qt6ct-kde
+        #
 
 
 
@@ -99,6 +99,7 @@ modules:
         - dms
         - dsearch
         - dms-greeter
+        - qt6ct-kde
 
 
   - type: dnf
@@ -138,8 +139,8 @@ modules:
         install: # system flatpaks we want all users to have and not remove
         # - org.mozilla.firefox
          - org.audacityteam.Audacity
-         - com.bitwig.BitwigStudio
-         - org.blender.Blender
+         #- com.bitwig.BitwigStudio
+         #- org.blender.Blender
          - com.brave.Browser
          - org.chromium.Chromium
          - de.leopoldluley.Clapgrep
@@ -147,40 +148,40 @@ modules:
          - org.gimp.GIMP
          - org.kde.kdenlive
          - com.obsproject.Studio
-         - re.sonny.Retro
+         #- re.sonny.Retro
          - org.videolan.VLC
          - org.libreoffice.LibreOffice
          - org.pitivi.Pitivi
          - fr.handbrake.ghb
-         - io.gitlab.theevilskeleton.Upscaler
+         #- io.gitlab.theevilskeleton.Upscaler
          - com.github.wwmm.easyeffects
-         - org.thentrythis.Samplebrain
-         - net.biniou.LeBiniou
-         - com.github.zocker_160.SyncThingy
+         #- org.thentrythis.Samplebrain
+         #- net.biniou.LeBiniou
+         #- com.github.zocker_160.SyncThingy
          - org.kde.kate
          - org.kde.okular
-         - org.mixxx.Mixxx
+         #- org.mixxx.Mixxx
          #- org._3fz.mtoc
-         - org.luanti.luanti
-         - org.vinegarhq.Sober
-         - net.supertuxkart.SuperTuxKart
-         - org.kde.kpat
-         - org.gnome.Chess
+         #- org.luanti.luanti
+         #- org.vinegarhq.Sober
+         #- net.supertuxkart.SuperTuxKart
+         #- org.kde.kpat
+         #- org.gnome.Chess
          - org.gnome.Maps
-         - org.nongnu.lingot
-         - com.dec05eba.gpu_screen_recorder
-         - com.github.polymeilex.neothesia
-         - com.rafaelmardojai.Blanket
-         - me.timschneeberger.jdsp4linux
+         #- org.nongnu.lingot
+        # - com.dec05eba.gpu_screen_recorder
+         #- com.github.polymeilex.neothesia
+         #- com.rafaelmardojai.Blanket
+         #- me.timschneeberger.jdsp4linux
          - org.inkscape.Inkscape
          - org.virt_manager.virt-manager
          - org.virt_manager.virt_manager.Extension.Qemu
          - io.missioncenter.MissionCenter
          - io.github.kolunmi.Bazaar
-         - com.mattjakeman.ExtensionManager
+         #- com.mattjakeman.ExtensionManager
          - com.github.tchx84.Flatseal
-         - org.altlinux.Tuner
-         - io.github.shiftey.Desktop
+         #- org.altlinux.Tuner
+         #- io.github.shiftey.Desktop
          - be.alexandervanhee.gradia
          
       # - scope: user # Also add Flathub user repo, but no user packages
