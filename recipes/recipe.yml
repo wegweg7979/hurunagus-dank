@@ -76,6 +76,7 @@ modules:
       packages:
         - firefox
         - firefox-langpacks
+        - intel-media-driver
         #- gnome-software
         #- gnome-system-monitor
         #- gnome-tour
@@ -101,6 +102,7 @@ modules:
         - dsearch
         - dms-greeter
         - qt6ct-kde
+        - dankcalendar-git
 
 
   - type: dnf
@@ -120,6 +122,7 @@ modules:
         - libva-intel-driver
         - libva-utils
         - gstreamer1-vaapi
+        - libavcodec-freeworld
 
   - type: gschema-overrides
 
