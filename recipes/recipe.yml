@@ -122,7 +122,7 @@ modules:
         - libva-intel-driver
         - libva-utils
         - gstreamer1-vaapi
-        - libavcodec-freeworld
+        #- libavcodec-freeworld
 
   - type: gschema-overrides
 
